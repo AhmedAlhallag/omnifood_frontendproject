@@ -1,0 +1,153 @@
+/* ------------------------------- */
+/* -------- BASIC SETUP --------- */
+/* ------------------------------- */
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html{
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  text-rendering: optimizeLegibility;
+  color:#555;
+  font-size: 20px
+}
+
+/* ------------------------------- */
+/* -------- REUSABLE COMPONENTS --------- */
+/* ------------------------------- */
+.row{
+  width: 1140px;
+  margin: 0 auto;
+}
+
+/* ------------------------------- */
+/* -------- HEADINGS --------- */
+/* ------------------------------- */
+h1{
+  margin: 0px;
+  color: #fff;
+  font-weight: 300;
+  word-spacing: 3px;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  font-size: 2.5em;
+  display: inline-block;
+}
+h1 span {
+  font-size: 0.8em
+}
+
+/* ------------------------------- */
+/* -------- BUTTONS --------- */
+/* ------------------------------- */
+.btn {
+text-decoration: none;
+padding: 0px 30px;
+padding-top: 10px;
+padding-bottom: 14px;
+font-weight: 300;
+border-radius: 200px;
+transition: background-color 0.44s ease-in-out, border 0.44s ease-in-out, color 0.44s ease-in-out
+
+}
+
+.btn-full{
+  background-color: #e67e22;
+  color:#fff;
+  border: 1px  solid #e67e22;
+  margin-right: 20px;
+
+
+}
+
+.btn-ghost{
+  color: #e67e22;
+  border: 1px  solid #e67e22;
+}
+
+.btn:hover{
+  background-color: #ef6d17;
+
+}
+
+.btn-ghost:hover{
+  color:#fff;
+  border: 1px  solid #ef6d17;
+}
+
+.btn-full:hover{
+  border: 1px  solid #ef6d17;
+
+}
+
+
+
+/* ------------------------------- */
+/* -------- HEADER --------- */
+/* ------------------------------- */
+.header-img{
+  background-image: linear-gradient(rgb(0, 0, 0, 0.70), rgb(0, 0, 0, 0.70)), url(/resources/assets/img/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+
+}
+
+.header-content{
+position: absolute;
+width: 64%;
+/* Msh moktn3 en lazm yb2a feh width; breaks the responsivness made by the transform */
+/* Note: when stacking so many content (text) in the h1 (child of this elem) the h1 might stack text verticaly since it finds no specified width set for the parent div (this elem) */
+/* although tb3n enha bt break el responsivness */
+
+left: 50%;
+top:50%;
+transform: translate(-56%,-50%);
+/* translate: take two arguments: the left-right scale percentage, and the top-bottom scale percentage*/
+/* I think it needs a top/bottom and a left/right to be set before hand for it to work properly */
+}
+
+.main-nav{
+  list-style: none;
+  float: right;
+}
+
+.main-nav li {
+  display: inline-block;
+  margin-left: 40px;
+  margin-top: 51px
+
+}
+.main-nav li a {
+  color:rgba(255, 255, 255, 0.76);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 300;
+  border-bottom: 1.5px solid transparent;
+  padding-bottom:  5px;
+  transition: border-bottom 0.24s ease-in-out;
+  font-size: 0.91em
+
+}
+
+.logo{
+  float: left;
+  height: 94px;
+  width: auto;
+  /* I think auto get/updates the image width with the
+  automated returned/adjusted width after the specified height is set  */
+  margin-top: 20px;
+  margin-left: 28px
+}
+
+.main-nav li a:hover{
+  border-bottom: 1.5px solid #eb8f3e
+
+
+}
