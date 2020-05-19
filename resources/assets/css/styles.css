@@ -98,7 +98,7 @@ h2::after{
   content: " ";
   width: 100px;
   margin: 0 auto;
-  margin-top: 15px
+  margin-top: 20px
 
 }
 
@@ -282,6 +282,76 @@ color: #555
   position: relative;
   left: -2%
 }
+
+
+ /* ================= TESTIMONIALS ================= */
+
+.testimonials-section{
+  color: #fff ;
+  font-family: "Avenir Next LT Pro", "Lato", sans-serif;
+  padding: 80px 0;
+  background-image: linear-gradient(rgb(0, 0, 0, 0.70), rgb(0, 0, 0, 0.70)), url("/resources/assets/img/back-customers.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+blockquote{
+  font-weight: 200;
+  padding: 2% ;
+  width: 88%;
+  line-height: 140%;
+  font-style: italic;
+  /* word-wrap: break-word; */
+  /* text-align: justify; */
+  /* padding-bottom: 50px; */
+  opacity: 0.92
+}
+
+blockquote::before{
+  content: "\201C";
+  display: block;
+  font-size: 500%;
+  font-style: normal;
+  font-family: "Lato";
+  font-weight: 100;
+  position: relative;
+  left: -20px;
+  top: 15px
+
+
+}
+
+cite{
+  display: block;
+  padding-top: 50px;
+  font-size: 85%;
+}
+cite span {
+  opacity: 0.75
+}
+cite img {
+height: 55px;
+width: auto;
+border-radius: 50%;
+vertical-align: middle;
+margin-right: 10px
+}
+
+.div-quote{
+  height: 198px;
+}
+
+.before-testimonials{
+  padding-top: 50px
+}
+
+
+
+
+
+
+
+
 
 
 
