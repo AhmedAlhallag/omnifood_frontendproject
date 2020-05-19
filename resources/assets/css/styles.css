@@ -44,6 +44,8 @@ html{
 }
 
 .box{
+  /* this is so important for columns with texts/or text and images ;
+   it adds a balanced padding between all the corners*/
   padding: 1%
 }
 /* ------------------------------- */
@@ -123,18 +125,6 @@ h2::after{
 
 
 
-/* ========= ICONS ========= */
-
-.the-icon {
-
-  color: #ef6d17 ;
-  font-size: 350% ;
-  margin-bottom: 10px;
-  display: block;
-
-
-
-}
 
 /* =========== MEAL IMAGES =========== */
 /* Note:
@@ -182,9 +172,12 @@ then using nowrap for the parent will actually work if you have 2-3 images in ON
   opacity: 1
 }
 
+
+
 /* ========== HOW IT WORKS - STEPS ==========*/
 .howitworks-section{
-  padding-top: 80px;
+  padding: 80px 0;
+  background-color: rgba(241, 241, 241, 1);
 }
 
 .steps-box:first-child {
@@ -193,9 +186,7 @@ then using nowrap for the parent will actually work if you have 2-3 images in ON
   /* padding-right: 3%; */
   margin-top: 30px;
   position: relative;
-  left: 14%;
-
-
+  left: 14%
 }
 
 .steps-box:last-child {
@@ -203,10 +194,7 @@ then using nowrap for the parent will actually work if you have 2-3 images in ON
   margin-top: 90px;
   position: relative;
   right: 11%
-
 }
-
-
 
 .steps-box .phone-img{
   width: 41% ;
@@ -246,6 +234,99 @@ then using nowrap for the parent will actually work if you have 2-3 images in ON
   margin-left: 45px
 }
 
+/* ===========  CITIES  =========== */
+
+.cities-section {
+padding: 80px 0px;
+
+
+}
+
+.box img{
+  max-width: 100%;
+  margin-bottom: 15px;
+  height: auto;
+}
+
+.cities-section h3 {
+font-family: "Avenir Next LT Pro", "Lato", sans-serif;
+margin-bottom: 25px
+}
+
+
+
+.box .city-info p{
+  font-size: 95%;
+  display: inline-block;
+  margin-left: 10px;
+
+}
+
+.city-info {
+  margin: 5px 0px;
+  /* overflow: hidden; */
+}
+
+.city-link{
+  text-decoration: none;
+  color: #ef6d17;
+  border-bottom: 1px solid #ef6d17;
+  transition: border-bottom 0.35s ease-in-out , color 0.35s ease-in-out;
+}
+
+.city-link:hover  {
+border-bottom: 1px solid transparent ;
+color: #555
+}
+.shifted{
+  position: relative;
+  left: -2%
+}
+
+
+
+
+/* ========= ICONS ========= */
+
+.the-icon {
+
+  color: #ef6d17 ;
+  font-size: 350% ;
+  margin-bottom: 10px;
+  display: block;
+
+}
+
+.city-info .city-icon{
+font-size : 120%;
+color: #ef6d17;
+width: 10%;
+text-align: center;
+display: inline-block;
+line-height: 127%;
+/* An important note:
+1)  I did not know that width of an icon (or any inline thing) would'nt change because
+    the display isnt "inline-block"
+2)  Icons beside text is easily adjusted once you adjust the icons;
+    by adjusting the width; then the line height; the aligning them to the center
+3)  To modify the margin with negative values; you should use 'vertical-align: middle' before hand
+ */
+
+}
+
+.ion-ios-person{
+  vertical-align: middle;
+  margin-top: -5px;
+}
+.ion-ios-star{
+  vertical-align: middle;
+  margin-top: -9px;
+}
+
+.ion-social-twitter{
+  vertical-align: middle;
+  margin-top: -1px;
+}
 
 
 
