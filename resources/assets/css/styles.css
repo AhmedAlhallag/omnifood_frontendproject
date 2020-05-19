@@ -345,6 +345,109 @@ margin-right: 10px
   padding-top: 50px
 }
 
+/* ------------------------------- */
+/* -------- SIGN-UP PLANS --------- */
+/* ------------------------------- */
+
+.plans-section{
+
+background-color: #f4f4f4;
+padding: 80px 0;
+}
+
+.plans-section h2{
+  margin-bottom: 50px;
+}
+.plans-section h3{
+padding: 7% 5% 4% 8%;
+color: rgb(61, 61, 61);
+margin-bottom: 0;
+font-size: 98%
+
+}
+
+/* .addition{
+  border-radius: 20px;
+  background-color: red
+} */
+.plan-card{
+
+  background-color: #fff;
+  /* text-align: center; */
+  /* padding: 5%; */
+  width: 90%;
+  margin-left: 5%;
+  /* border-top-left-radius: 20px;
+  border-top-right-radius: 20px; */
+
+  border-radius: 20px;
+  box-shadow: 0px 2px 2px #efefef;
+  transform: scale(1);
+  transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out ;
+}
+
+.plan-card:hover{
+  box-shadow: -9px 4px 2px #efefef ;
+  transform: scale(1.065);
+
+}
+
+.plan-price-month{
+  font-size: 290%;
+  color:#fb8a3f;
+  padding-bottom: 10px;
+  padding: 10px 10px 10px 23px
+}
+
+
+
+.plan-price-month span{
+font-size: 35%;
+}
+.plan-price-meal{
+  padding-bottom: 10px;
+  padding: 0px 10px 0px 24px;
+  font-size: 83%
+}
+
+.plan-card div{
+  border-bottom: 1px solid rgb(219, 219, 219);
+  padding-bottom: 12px
+
+}
+
+.plan-card ul{
+  list-style: none;
+  padding-top: 10px
+
+}
+
+.plan-card ul li{
+padding-bottom: 3px;
+font-size: 85%;
+
+}
+
+.plan-card div:last-child{
+  text-align: center;
+  padding: 35px 0px 40px 0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: 0 ;
+}
+
+.plan-card div:first-child{
+  background-color: rgba(244, 243, 240, 0.31)
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -367,7 +470,7 @@ margin-right: 10px
 
 }
 
-.city-info .city-icon{
+.city-icon{
 font-size : 120%;
 color: #ef6d17;
 width: 10%;
@@ -398,6 +501,15 @@ line-height: 127%;
   margin-top: -1px;
 }
 
+
+.checkmark-icon{
+  font-size : 120%;
+  color: #ef6d17;
+  width: 15%;
+  text-align: center;
+  display: inline-block;
+  line-height: 127%;
+}
 
 
 
@@ -461,6 +573,7 @@ line-height: 127%;
   background-position: center;
   height: 100vh;
   position: relative;
+  background-attachment: fixed;
 
 }
 
