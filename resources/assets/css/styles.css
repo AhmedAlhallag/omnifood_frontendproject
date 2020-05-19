@@ -16,6 +16,20 @@ html{
   font-size: 20px
 }
 
+.clearfix{
+  zoom: 1 ;
+}
+
+.clearfix:after{
+  content: "";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0
+
+
+}
+
 /* ------------------------------- */
 /* -------- REUSABLE COMPONENTS --------- */
 /* ------------------------------- */
@@ -24,36 +38,239 @@ html{
   margin: 0 auto;
 }
 
+.feature-section {
+  /* could have used margin, but using padding iis better if we wwant to give the section a background color */
+  padding: 80px 0 ;
+}
+
+.box{
+  padding: 1%
+}
 /* ------------------------------- */
 /* -------- HEADINGS --------- */
 /* ------------------------------- */
-h1{
-  margin: 0px;
-  color: #fff;
+h1,
+h2,
+h3{
   font-weight: 300;
-  word-spacing: 3px;
-  letter-spacing: 1px;
-  margin-bottom: 40px;
   text-transform: uppercase;
-  font-size: 2.5em;
-  display: inline-block;
+
 }
 h1 span {
   font-size: 0.8em
 }
 
+h1{
+  word-spacing: 3px;
+  margin: 0px;
+  color: #fff;
+  font-weight: 300;
+  margin-bottom: 40px;
+  font-size: 2.5em;
+  display: inline-block;
+  letter-spacing: 1px;
+
+}
+h2{
+  font-weight: 300;
+  font-size: 1.8em;
+  font-family: "Avenir Next LT Pro", "Lato";
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+h3{
+  /* font-family: "Avenir Next LT Pro", "Lato"; */
+  margin-bottom: 30px;
+  font-size: 1.1em;
+  /* font-weight: 300 */
+  word-spacing: 4px
+}
+
+
+h2::after{
+  display: block;
+  background-color: #ef6d17;
+  height: 2px;
+  content: " ";
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 15px
+
+}
+
+
+
+/* =========== PARAGRAPHS =========== */
+
+.long-text{
+  line-height: 145%;
+  /* text-align: center; */
+  /* instead of making it aligned center, we can confine the width then center the whole thing */
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+  text-align:center;
+  margin-bottom: 30px
+}
+
+.box p {
+  line-height: 125%;
+  font-size: 90%;
+  text-align: justify;
+}
+
+
+
+/* ========= ICONS ========= */
+
+.the-icon {
+
+  color: #ef6d17 ;
+  font-size: 350% ;
+  margin-bottom: 10px;
+  display: block;
+
+
+
+}
+
+/* =========== MEAL IMAGES =========== */
+/* Note:
+using a 100% width  and a display inline block for the li's
+then using nowrap for the parent will actually work if you have 2-3 images in ONE row
+ */
+.images-section {
+  padding: 0 ;
+
+}
+
+.meals-unorderedlist{
+  width: 100%;
+  /* this can be applied on the section as well */
+  list-style:none;
+
+}
+
+.meals-unorderedlist li {
+  display:block;
+  width: 25% ;
+  float: left;
+
+}
+.meals-unorderedlist li .meal-figure {
+  width: 100%;
+  overflow: hidden;
+  background: black
+  /* REALLY IMPORTANT:
+  the overflow : hidden should be applied to the direct parent
+   */
+
+}
+
+.meals-unorderedlist li .meal-figure img{
+  width: 100%;
+  height: auto;
+  opacity: 0.70 ;
+  transform: scale(1.15);
+  transition: transform 0.7s ,  opacity 0.6s ;
+}
+
+.meals-unorderedlist li .meal-figure img:hover{
+  transform: scale(1.03) ;
+  opacity: 1
+}
+
+/* ========== HOW IT WORKS - STEPS ==========*/
+.howitworks-section{
+  padding-top: 80px;
+}
+
+.steps-box:first-child {
+
+  /* text-align: right; */
+  /* padding-right: 3%; */
+  margin-top: 30px;
+  position: relative;
+  left: 14%;
+
+
+}
+
+.steps-box:last-child {
+  /* padding-left: 3%; */
+  margin-top: 90px;
+  position: relative;
+  right: 11%
+
+}
+
+
+
+.steps-box .phone-img{
+  width: 41% ;
+  height: auto;
+}
+
+/* I think when there is multiple instances of the same class; last of type should be used */
+.howitworks-steps:last-of-type{
+  margin-bottom: 93px
+}
+
+.howitworks-steps{
+  margin-bottom: 50px
+}
+
+.howitworks-steps .number{
+  border: 2px solid #ef6d17;
+  color: #ef6d17;
+  font-size: 125%;
+  display:inline-block ;
+  padding: 8px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  float: left;
+  margin-right: 25px
+}
+
+.btn-app img{
+  height: 65px;
+  width: auto;
+  margin-right: 15px;
+}
+
+.btn-app .left-img {
+  margin-left: 45px
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ------------------------------- */
 /* -------- BUTTONS --------- */
 /* ------------------------------- */
 .btn {
-text-decoration: none;
-padding: 0px 30px;
-padding-top: 10px;
-padding-bottom: 14px;
-font-weight: 300;
-border-radius: 200px;
-transition: background-color 0.44s ease-in-out, border 0.44s ease-in-out, color 0.44s ease-in-out
-
+  text-decoration: none;
+  padding: 0px 30px;
+  padding-top: 10px;
+  padding-bottom: 14px;
+  font-weight: 300;
+  border-radius: 200px;
+  transition: background-color 0.44s ease-in-out, border 0.44s ease-in-out, color 0.44s ease-in-out
 }
 
 .btn-full{
@@ -61,8 +278,6 @@ transition: background-color 0.44s ease-in-out, border 0.44s ease-in-out, color 
   color:#fff;
   border: 1px  solid #e67e22;
   margin-right: 20px;
-
-
 }
 
 .btn-ghost{
@@ -72,7 +287,6 @@ transition: background-color 0.44s ease-in-out, border 0.44s ease-in-out, color 
 
 .btn:hover{
   background-color: #ef6d17;
-
 }
 
 .btn-ghost:hover{
@@ -83,7 +297,6 @@ transition: background-color 0.44s ease-in-out, border 0.44s ease-in-out, color 
 .btn-full:hover{
   border: 1px  solid #ef6d17;
   background-color: #bd520b;
-
 }
 
 
@@ -101,17 +314,16 @@ transition: background-color 0.44s ease-in-out, border 0.44s ease-in-out, color 
 }
 
 .header-content{
-position: absolute;
-width: 64%;
-/* Msh moktn3 en lazm yb2a feh width; breaks the responsivness made by the transform */
-/* Note: when stacking so many content (text) in the h1 (child of this elem) the h1 might stack text verticaly since it finds no specified width set for the parent div (this elem) */
-/* although tb3n enha bt break el responsivness */
-
-left: 50%;
-top:50%;
-transform: translate(-56%,-50%);
-/* translate: take two arguments: the left-right scale percentage, and the top-bottom scale percentage*/
-/* I think it needs a top/bottom and a left/right to be set before hand for it to work properly */
+  position: absolute;
+  width: 64%;
+  /* Msh moktn3 en lazm yb2a feh width; breaks the responsivness made by the transform */
+  /* Note: when stacking so many content (text) in the h1 (child of this elem) the h1 might stack text verticaly since it finds no specified width set for the parent div (this elem) */
+  /* although tb3n enha bt break el responsivness */
+  left: 50%;
+  top:50%;
+  transform: translate(-56%,-50%);
+  /* translate: take two arguments: the left-right scale percentage, and the top-bottom scale percentage*/
+  /* I think it needs a top/bottom and a left/right to be set before hand for it to work properly */
 }
 
 .main-nav{
@@ -150,7 +362,5 @@ transform: translate(-56%,-50%);
 .main-nav li a:hover{
   border-bottom: 1.5px solid #eb8f3e;
   color:rgba(255, 255, 255, 1);
-
-
 
 }
