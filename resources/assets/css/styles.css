@@ -568,7 +568,7 @@ line-height: 127%;
 /* -------- HEADER --------- */
 /* ------------------------------- */
 .header-img{
-  background-image: linear-gradient(rgb(0, 0, 0, 0.70), rgb(0, 0, 0, 0.70)), url(/resources/assets/img/hero.jpg);
+  background-image: linear-gradient(rgb(0, 0, 0, 0.70), rgb(0, 0, 0, 0.70)), url('../img/hero.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh;
