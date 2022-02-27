@@ -201,7 +201,7 @@ then using nowrap for the parent will actually work if you have 2-3 images in ON
   height: auto;
 }
 
-/* I think when there is multiple instances of the same class; last of type should be used */
+/* when there is multiple instances of the same class; last of type should be used */
 .howitworks-steps:last-of-type{
   margin-bottom: 93px
 }
@@ -478,7 +478,7 @@ text-align: center;
 display: inline-block;
 line-height: 127%;
 /* An important note:
-1)  I did not know that width of an icon (or any inline thing) would'nt change because
+1)  width of an icon (or any inline thing) would'nt change because
     the display isnt "inline-block"
 2)  Icons beside text is easily adjusted once you adjust the icons;
     by adjusting the width; then the line height; the aligning them to the center
@@ -580,14 +580,12 @@ line-height: 127%;
 .header-content{
   position: absolute;
   width: 64%;
-  /* Msh moktn3 en lazm yb2a feh width; breaks the responsivness made by the transform */
   /* Note: when stacking so many content (text) in the h1 (child of this elem) the h1 might stack text verticaly since it finds no specified width set for the parent div (this elem) */
-  /* although tb3n enha bt break el responsivness */
   left: 50%;
   top:50%;
   transform: translate(-56%,-50%);
   /* translate: take two arguments: the left-right scale percentage, and the top-bottom scale percentage*/
-  /* I think it needs a top/bottom and a left/right to be set before hand for it to work properly */
+  /* it needs a top/bottom and a left/right to be set before hand for it to work properly */
 }
 
 .main-nav{
